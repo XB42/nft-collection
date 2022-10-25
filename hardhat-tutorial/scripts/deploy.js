@@ -19,11 +19,15 @@ async function main() {
     whitelistContract
   );
 
+  await deployedCryptoDevsContract.deployed();
+
   // print the address of the deployed contract
   console.log(
     "Crypto Devs Contract Address:",
     deployedCryptoDevsContract.address
   );
+
+  await deployedCryptoDevsContract.maxTokenIds();
 }
 
 // Call the main function and catch if there is any error
